@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Ideias de Startups</title>
+    <script src="scriptG.js"></script>
+    <link rel="stylesheet" href="styleG.css"> 
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- TELA DE AUTENTICAÇÃO -->
+        <div id="tela-login">
+            <h2>Acesso ao Sistema</h2>
+            <div id="mensagem-erro" class="erro">Usuário ou senha incorretos!</div>
+            
+            <div class="campo-grupo">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" placeholder="Digite seu usuário">
+            </div>
+            
+            <div class="campo-grupo">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" placeholder="Digite sua senha">
+            </div>
+            
+            <button class="btn" onclick="validarLogin()">Entrar</button>
+        </div>
+
+        <!-- ÁREA RESTRITA DO SISTEMA (CRUD) -->
+        <div id="tela-sistema">
+            <h2>Ideias de Startups</h2>
+            
+            <div class="campo-grupo">
+                <label for="nova-ideia">Nova Ideia de Negócio</label>
+                <input type="text" id="nova-ideia" placeholder="Ex: App de finanças para pets">
+            </div>
+
+            <div class="botoes-posicao">
+                <button class="btn" onclick="adicionarAoInicio()">Inserir no Início</button>
+                <button class="btn" onclick="adicionarAoFinal()">Inserir no Fim</button>
+            </div>
+
+            <!-- Lista onde as ideias inseridas serão renderizadas dinamicamente -->
+            <ul id="lista-ideias" class="lista-ideias"></ul>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StartupLab — FIAP 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styleCl.css" />
+  <script src="scriptCl.js"></script>
+</head>
+<body>
+
+  <!-- ========== TELA DE LOGIN ========== -->
+  <section id="tela-login">
+    <div class="login-cabecalho">
+      <span class="tag">FIAP — 1º Semestre</span>
+      <h1>Startup<span>Lab</span></h1>
+      <p>Acesse com suas credenciais para continuar</p>
+    </div>
+
+    <div class="login-painel">
+      <div class="campo-grupo">
+        <label for="campo-usuario">Usuário</label>
+        <input
+          type="text"
+          id="campo-usuario"
+          placeholder="ex: aluno"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="campo-grupo">
+        <label for="campo-senha">Senha</label>
+        <input
+          type="password"
+          id="campo-senha"
+          placeholder="••••••••"
+        />
+      </div>
+
+      <div id="mensagem-erro">Usuário ou senha incorretos. Tente novamente.</div>
+
+      <button class="btn-primario" onclick="validarLogin()">Entrar no sistema</button>
+    </div>
+
+    <p class="login-dica">
+      Dica: usuário <code>aluno</code> / senha <code>fiap2026</code>
+    </p>
+  </section>
+
+  <!-- ========== ÁREA DO SISTEMA ========== -->
+  <section id="tela-sistema">
+
+    <div class="sistema-header">
+      <h2>Minhas <span>Ideias</span></h2>
+      <button class="btn-logout" onclick="fazerLogout()">Sair ↩</button>
+    </div>
+
+    <!-- Painel: adicionar ideia -->
+    <div class="painel">
+      <p class="painel-titulo">// Adicionar nova ideia</p>
+      <div class="adicionar-linha">
+        <input
+          type="text"
+          id="campo-ideia"
+          placeholder="Ex: App de doação de alimentos..."
+        />
+        <button class="btn-unshift" onclick="adicionarAoInicio()">+ Início</button>
+        <button class="btn-push"    onclick="adicionarAoFinal()">+ Final →</button>
+      </div>
+    </div>
+
+    <!-- Painel: lista de ideias -->
+    <div class="painel">
+      <div class="array-header">
+        <p class="array-titulo">// Lista de ideias [ array ]</p>
+        <p class="array-contador">total: <span id="contador">0</span></p>
+      </div>
+      <ul id="lista-ideias"></ul>
+    </div>
+
+    <p class="rodape">StartupLab &mdash; Projeto FIAP 2026 &mdash; Vanilla JS</p>
+  </section>
+
+  <!-- O script é carregado no final do body para garantir que o HTML já existe -->
+  <script src="script.js"></script>
+
+</body>
+</html>

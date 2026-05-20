@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ideias de Startups</title>
+    <script src="scriptC.js"></script>
+
+    <link rel="stylesheet" href="styleC.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- LOGIN -->
+        <div id="telaLogin">
+
+            <h1>Login</h1>
+
+            <input type="text" id="usuario" placeholder="Usuário">
+
+            <input type="password" id="senha" placeholder="Senha">
+
+            <button onclick="validarLogin()">
+                Entrar
+            </button>
+
+            <p id="mensagemLogin"></p>
+
+        </div>
+
+        <!-- SISTEMA -->
+        <div id="telaSistema" class="hidden">
+
+            <h2>Ideias de Startups</h2>
+
+            <input type="text" id="novaIdeia" placeholder="Digite uma ideia">
+
+            <button onclick="adicionarNoFinal()">
+                Adicionar no Final
+            </button>
+
+            <button class="btn-secundario" onclick="adicionarNoInicio()">
+                Adicionar no Início
+            </button>
+
+            <ul id="listaIdeias"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

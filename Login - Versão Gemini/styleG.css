@@ -1,0 +1,147 @@
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #121214;
+            color: #e1e1e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #202024;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        /* Utilitários de Layout */
+        .campo-grupo {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #a8a8b3;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #121214;
+            border: 1px solid #29292e;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: 1px solid #04d361;
+        }
+
+        /* Botões e Seleções */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #04d361;
+            border: none;
+            border-radius: 4px;
+            color: #000000;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #06b956;
+        }
+
+        .btn-pequeno {
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-editar {
+            background-color: #ffbb33;
+            color: #000000;
+            margin-right: 5px;
+        }
+
+        .btn-excluir {
+            background-color: #ff4444;
+            color: #ffffff;
+        }
+
+        .botoes-posicao {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .botoes-posicao .btn {
+            margin-top: 0;
+        }
+
+        /* Mensagens de Erro */
+        .erro {
+            color: #ff4444;
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        /* Elementos de Controle de Exibição (SPA) */
+        #tela-sistema {
+            display: none; /* Escondido por padrão */
+        }
+
+        /* Estilização do CRUD */
+        .lista-ideias {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .item-ideia {
+            background-color: #29292e;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .texto-ideia {
+            word-break: break-all;
+            padding-right: 10px;
+            font-size: 15px;
+        }
+
+        .acoes {
+            display: flex;
+            flex-shrink: 0;
+        }
