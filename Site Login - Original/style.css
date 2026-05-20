@@ -90,3 +90,60 @@ p{
     text-align: center;
     margin-top: 10px;
 }
+
+.botao-site1 {
+    position: fixed;
+    bottom: 20px;   
+    right: 20px;    
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-site1:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
+
+.botao-site2 {
+    position: fixed;
+    bottom: 20px;   
+    right: 200px;    
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-site2:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
+
+.botao-site3 {
+    position: fixed;
+    bottom: 20px;   
+    right: 360px;    
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-site3:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
