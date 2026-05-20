@@ -1,9 +1,9 @@
 let usuarioCorreto = "aluno";
 let senhaCorreta = "fiap2026";
-let ideias = [
-    "App de entregas",
-    "Fintech de moedas",
-    "Sistema de reciclagem"
+let jogos = [
+    "Cuphead",
+    "Hollow Knight",
+    "Celeste"
 ];
 function validarLogin(){
   let usuario = document.getElementById("usuario").value;
@@ -20,21 +20,21 @@ function validarLogin(){
 }
 
 function adicionarNoFinal(){
-    let campoIdeia = document.getElementById("novaIdeia");
-    let texto = campoIdeia.value;
+    let campoJogo = document.getElementById("novoJogo");
+    let texto = campoJogo.value;
     if(texto !== ""){
-        ideias.push(texto);
-        campoIdeia.value = "";
+        jogos.push(texto);
+        campoJogo.value = "";
         renderizarLista();
     }
 }
 
 function adicionarNoInicio(){
-    let campoIdeia = document.getElementById("novaIdeia");
-    let texto = campoIdeia.value;
+    let campoJogo = document.getElementById("novoJogo");
+    let texto = campoJogo.value;
     if(texto !== ""){
-        ideias.unshift(texto);
-        campoIdeia.value = "";
+        jogos.unshift(texto);
+        campoJogo.value = "";
         renderizarLista();
 
     }
@@ -42,34 +42,34 @@ function adicionarNoInicio(){
 }
 
 function renderizarLista(){
-    let lista = document.getElementById("listaIdeias");
+    let lista = document.getElementById("listaJogos");
     lista.innerHTML = "";
     let i = 0;
-    while(i < ideias.length){
+    while(i < jogos.length){
         lista.innerHTML +=
         "<li>" +
-            "<strong>Ideia " + i + ":</strong> " + ideias[i] +
+            "<strong>Jogo " + i + ":</strong> " + jogos[i] +
             "<div class='acoes'>" +
-                "<button class='btn-editar' onclick='editarIdeia(" + i + ")'>Editar</button>" +
-                "<button class='btn-remover' onclick='removerIdeia(" + i + ")'>Remover</button>" +
+                "<button class='btn-editar' onclick='editarJogo(" + i + ")'>Editar</button>" +
+                "<button class='btn-remover' onclick='removerJogo(" + i + ")'>Remover</button>" +
             "</div>" +
         "</li>";
         i++;
     }
 }
 
-function editarIdeia(posicao){
-    let novoTexto = prompt(
-        "Digite o novo texto:",
-        ideias[posicao]
+function editarJogo(posicao){
+    let novoJogo = prompt(
+        "Digite o novo jogo:",
+        jogos[posicao]
     );
-    if(novoTexto !== null && novoTexto !== ""){
-        ideias[posicao] = novoTexto;
+    if(novoJogo !== null && novoJogo !== ""){
+        jogos[posicao] = novoJogo;
         renderizarLista();
     }
 }
 
-function removerIdeia(posicao){
-    ideias.splice(posicao, 1);
+function removerJogo(posicao){
+    jogos.splice(posicao, 1);
     renderizarLista();
 }
